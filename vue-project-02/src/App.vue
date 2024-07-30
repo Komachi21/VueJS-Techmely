@@ -17,6 +17,10 @@ const toTitle = (listString) => {
 }
 const attributeName = "href"
 const url = "https://youtube.com"
+const eventName = "click";
+const eventAction = () => {
+  console.log("OK");
+}
 </script>
 
 <template>
@@ -31,6 +35,7 @@ const url = "https://youtube.com"
     <button v-bind="objectOfAttrs">Binding Multiple</button>
     <button @click="toTitle(listString)" v-if="isDisplay">Number: {{ number + 1 }}</button>
     <a v-bind:[attributeName]="url"> Youtube </a>
+    <button v-on:[eventName]="eventAction">Click Đối Số Động</button>
   </div>
 </template>
 
